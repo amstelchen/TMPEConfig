@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=TMPE Config Editor
+GenericName=TMPE Config Editor
+Type=Application
+Comment=Configure settings for Traffic Manager: President Edition.
+Icon=TMPEConfig
+Exec=/usr/bin/python -m tmpeconfig
+Terminal=false
+StartupNotify=false
+StartupWMClass=tmpeconfig
+Categories=Games;

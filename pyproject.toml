@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "tmpeconfig" # TMPEConfig
+version = "0.1.0"
+description = "TMPE Config Editor"
+authors = ["Michael John <michael.john@gmx.at>"]
+readme = "README.md"
+license = "GPL"
+include = ["LICENSE", "CHANGELOG.md", "README.md", "TMPEConfig.ui", "TMPEConfig.png"]
+
+[tool.poetry.scripts]
+tmpeconfig = 'tmpeconfig.__main__:main'
+TMPEConfig = 'tmpeconfig.__main__:main'
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+pyside6-essentials = "^6.7.2"
+pefile = "^2024.8.26"
+lxml = "^5.3.0"
+
+[tool.poetry.dev-dependencies]
+pyside6 = "^6.7.2"
+
+[tool.poetry.group.dev.dependencies]
+pyside6 = "^6.7.2"
+
+[tool.ruff]
+# Avoid enforcing line-length violations (`E501`)
+# and unused imports  (`F401`)
+lint.ignore = ["E501", "F401"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+homepage = "https://github.com/amstelchen/TMPEConfig"
+repository = "https://github.com/amstelchen/TMPEConfig"
+documentation = "https://github.com/amstelchen/TMPEConfig"
