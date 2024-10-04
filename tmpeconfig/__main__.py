@@ -10,7 +10,7 @@ def get_version_number(filename):
    info = GetFileVersionInfo (filename, "\\")
    ms = info['FileVersionMS']
    ls = info['FileVersionLS']
-   return HIWORD (ms), LOWORD (ms), HIWORD (ls), LOWORD (ls)
+   return "%d.%d.%d.%d" % (HIWORD (ms), LOWORD (ms), HIWORD (ls), LOWORD (ls))
 
 def get_version_info(filename):
     pe = PE(filename)
@@ -27,6 +27,7 @@ def get_version_info(filename):
 
 try:
     from win32api import GetFileVersionInfo, LOWORD, HIWORD  # type: ignore
+    get_version_info = get_version_number
 except ImportError:
     print('No win32 API! Tryping pefile...')
     from pefile import PE
