@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tmpeconfig" # TMPEConfig
-version = "0.1.0"
+version = "0.1.1"
 description = "TMPE Config Editor"
 authors = ["Michael John <michael.john@gmx.at>"]
 readme = "README.md"
